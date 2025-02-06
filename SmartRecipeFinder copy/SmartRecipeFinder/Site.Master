@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SmartRecipeFinder.Site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's In My Kitchen?</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header Section -->
+        <header class="navbar">
+            <div class="navbar">
+    <!-- Left Side Navigation -->
+    <div class="nav-left">
+        <a href="home.aspx">Home</a>
+        <a href="trending-recipes.aspx">Trending Recipes</a>
+    </div>
+
+    <!-- Centered Emoji Logo -->
+    <div class="logo">
+        <span class="logo-emoji">🍴</span>
+    </div>
+
+    <!-- Right Side Navigation -->
+    <div class="nav-right">
+    <a href="favorites.aspx" title="Favorites"><i class="fa-solid fa-heart"></i></a>
+    <a href="login.aspx" title="Login"><i class="fa-solid fa-user-lock"></i></a>
+    <a href="about.aspx">About Us</a>
+    </div>
+</div>
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="content-container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>© 2025 What's In My Kitchen. All Rights Reserved.</p>
+        </footer>
+    </form>
+</body>
+</html>
