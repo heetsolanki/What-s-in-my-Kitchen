@@ -8,12 +8,12 @@
     <title>What's In My Kitchen?</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Header Section -->
-        <header class="navbar">
-            <div class="navbar">
+      
+       <div class="navbar">
     <!-- Left Side Navigation -->
     <div class="nav-left">
         <a href="home.aspx">Home</a>
@@ -22,7 +22,7 @@
 
     <!-- Centered Emoji Logo -->
     <div class="logo">
-        <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/logo.jpg" AlternateText="What's in my Kitchen?" CssClass="logo-img" />
+        <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/main-logo.png" AlternateText="What's in my Kitchen?" CssClass="logo-img" />
     </div>
 
 
@@ -34,7 +34,7 @@
     </div>
 </div>
 
-        </header>
+      
 
         <!-- Main Content -->
         <main class="content-container">
@@ -44,8 +44,10 @@
 
         <!-- Footer Section -->
         <footer class="footer">
-            <p>© 2025 What's In My Kitchen. All Rights Reserved.</p>
+            <p>© 2025 What's In My Kitchen?&nbsp;&nbsp;All Rights Reserved.</p>
         </footer>
     </form>
+ 
+
 </body>
 </html>

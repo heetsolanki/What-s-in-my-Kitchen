@@ -5,35 +5,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to the whole page */
+  
 }
 
+
 /* ------------------ Body Styles ------------------ */
+
 body {
-    background-color: #F0EAD2;
+    
     color: #6C584C;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     transition: background-color 0.4s ease;
-    padding: 0 15px; /* Adds padding to the body */
+    padding: 0 0px; /* Adds padding to the body */
+
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/website-background-image.jpg'); /* Darkens the image */
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    position: relative;
+
+
 }
 
+
+
 /* ------------------ Navbar Styles ------------------ */
+
 .navbar {
-    background-color: #6C584C;
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(6px); 
+    -webkit-backdrop-filter: blur(6px);
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px 30px;
+    padding: 8px;
     position: sticky;
-    top: 0;
+    top: 20px; 
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    width: 100%;
+    width: calc(100% - 60px); 
+    margin: 10px 30px 50px 30px;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 50px;
     transition: background-color 0.3s ease;
 }
+
+
+
+
 
 /* Navbar - Left and Right Sections */
 .nav-left, .nav-right {
@@ -62,7 +88,7 @@ body {
         text-decoration: none;
         color: #F0EAD2;
         padding: 8px 15px;
-        border-radius: 5px;
+        border-radius: 20px;
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
@@ -72,58 +98,80 @@ body {
         }
 
 /* Navbar Logo */
+
+
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px; /* Adjust height as needed */
+    height: 60px;
+    cursor: pointer; /* Adding cursor to show that the logo is clickable */
+}
+
+/* Keep the existing logo styles */
+@keyframes fire-glow {
+    0% {
+        filter: drop-shadow(0 0 5px orange);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 45px orange);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 5px orange);
+    }
 }
 
 .logo-img {
-    width: 50px; /* Adjust width as needed */
+    width: 85px;
     height: auto;
     object-fit: contain;
+    animation: fire-glow 2.5s infinite alternate ease-in-out;
+    transition: transform 1s ease-in-out, filter 0.6s ease-in-out;
 }
+
+    .logo-img:hover {
+        transform: rotateY(360deg);
+    }
+
 
 
 /* ------------------ Footer Styles ------------------ */
 .footer {
+    width:contain;
     background-color: #6C584C;
-    color: #F0EAD2;
+    color: white;
     text-align: center;
     padding: 15px 0;
-    margin-top: auto;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
 }
 
-/* ------------------ Background and Content Container ------------------ */
-.content-container {
+
+    /* ------------------ Background and Content Container ------------------ */
+    .content-container {
     flex: 1;
-    max-width: 960px;
-    margin: 20px auto;
-    background-color: #DDE5B6;
+    max-width:1200px;
+    margin: 30px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-    .content-container:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    }
 
 
 /* ------------------ Home Page ------------------ */
 
 /* Home Page - Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #9C7A56, #6C584C); /* Updated color matching the theme */
+    background-size:cover;
+    background-position: center; 
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+
     color: white;
     padding: 50px 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
     .hero-section h1 {
@@ -136,15 +184,24 @@ body {
         margin-bottom: 30px;
     }
 
+
+.hero-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+}
+
 .home-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+
 .btn-primary {
     padding: 12px 30px;
-    background-color: #A98467; /* Matching theme color */
+    background-color: #A98467;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -171,7 +228,7 @@ body {
     background-color: #F1E1C6; /* Lighter shade for card background */
     color: #6C584C; /* Text color matching the theme */
     padding: 20px;
-    border-radius: 12px; /* Slightly more rounded corners for better aesthetic */
+    border-radius: 10px; /* Slightly more rounded corners for better aesthetic */
     width: 30%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
@@ -414,18 +471,22 @@ body {
 
 /* About Us Section */
 .about-section {
-    text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    text-align: left;
 }
 
 .about-card {
-    background-color: #F5F5DC; /* Lighter beige color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-    width: 80%;
-    max-width: 700px;
+    max-width: auto;
+    align-items: center;
 }
 
     .about-card h1 {
@@ -436,24 +497,44 @@ body {
 
     .about-card p {
         font-size: 1.2rem;
-        color: #6C584C;
+        color: white;
         line-height: 1.5;
     }
 
-/* Developer Profiles Section */
-.developers-section {
-    text-align: center;
-    margin-bottom: 40px;
+.food-wheel {
+    width: 250px;
+    height: auto;
+    transition: transform 1s ease; 
 }
 
-    .developers-section h2 {
-        font-size: 2rem;
-        color: #A98467;
-        margin-bottom: 20px;
-    }
+.food-wheel:hover {
+    transform: rotate(360deg); 
+}
+
+.food-wheel-hover-text {
+    font-size: 10px;
+    color: white; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    bottom: 10px; 
+    right: 10px;
+}
+
+.food-wheel-container:hover .food-wheel-hover-text {
+    opacity: 1;
+}
+
+/* Developer Profiles Section */
+.developer-section h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #A98467;
+    margin-bottom: 20px;
+}
 
 /* Developer Cards Wrapper */
-.developer-cards-wrapper {
+    .developer-cards-wrapper 
+{
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -528,3 +609,5 @@ body {
         line-height: 1.5;
     }
 
+
+/* FIND RECIPES PAGE ENTIRE CSS */
