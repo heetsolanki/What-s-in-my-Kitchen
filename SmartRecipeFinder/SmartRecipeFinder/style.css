@@ -74,15 +74,17 @@ body {
 /* Navbar Logo */
 .logo {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    justify-content: center;
+    height: 60px; /* Adjust height as needed */
 }
 
-.logo-emoji {
-    font-size: 2.5rem;
-    transition: font-size 0.3s ease;
+.logo-img {
+    width: 50px; /* Adjust width as needed */
+    height: auto;
+    object-fit: contain;
 }
+
 
 /* ------------------ Footer Styles ------------------ */
 .footer {

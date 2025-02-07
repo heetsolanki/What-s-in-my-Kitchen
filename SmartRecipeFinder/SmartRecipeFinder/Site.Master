@@ -22,8 +22,9 @@
 
     <!-- Centered Emoji Logo -->
     <div class="logo">
-        <span class="logo-emoji">🍴</span>
+        <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/logo.jpg" AlternateText="What's in my Kitchen?" CssClass="logo-img" />
     </div>
+
 
     <!-- Right Side Navigation -->
     <div class="nav-right">
