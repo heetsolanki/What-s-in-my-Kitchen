@@ -386,7 +386,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f3ece4; /* Soft background */
 }
 
 /* Main auth card container */
@@ -429,8 +428,9 @@ body {
     .input-field:hover, .input-field:focus,
     .input-password:hover, .input-password:focus {
         border-color: #8B6F5A;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 20px rgba(169, 132, 103, 1);
         outline: none;
+        transition-delay: 0.2s;
     }
 
 /* Button styling */
