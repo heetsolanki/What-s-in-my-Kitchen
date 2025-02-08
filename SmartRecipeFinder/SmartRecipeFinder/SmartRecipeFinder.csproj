@@ -76,6 +76,7 @@
     <Content Include="style.css" />
     <Content Include="trending-recipes.aspx" />
     <Content Include="Web.config" />
+    <Content Include="find-recipes.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about.aspx.cs">
@@ -127,6 +128,13 @@
     </Compile>
     <Compile Include="trending-recipes.aspx.designer.cs">
       <DependentUpon>trending-recipes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="find-recipes.aspx.cs">
+      <DependentUpon>find-recipes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="find-recipes.aspx.designer.cs">
+      <DependentUpon>find-recipes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@
             Say goodbye to food waste and hello to creative cooking!</p>
         
         <div class="home-container">
-            <a href="#" class="btn-primary">Find Recipes</a>
+            <a href="find-recipes.aspx" class="btn-primary">Find Recipes</a>
         </div>
     </section>
 

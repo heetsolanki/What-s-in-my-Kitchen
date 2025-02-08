@@ -10,7 +10,7 @@
             <asp:Label ID="Label2" runat="server" CssClass="input-label" Text="Password"></asp:Label>
             <asp:TextBox ID="password" runat="server" CssClass="input-password" TextMode="Password">Password</asp:TextBox>
             <button type="submit" class="auth-btn">Login</button>
-            <p>Don't have an account? <a href="Register.aspx">Register Here</a></p>
+            <p>Don't have an account?<br /> <a href="Register.aspx">Register Here</a></p>
         </div>
     </div>
 </asp:Content>
