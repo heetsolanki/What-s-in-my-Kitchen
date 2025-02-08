@@ -5,8 +5,10 @@
     <div class="auth-container">
         <div class="auth-card">
             <h1>Login</h1>
-            <input class="input-field" type="email" name="email" placeholder="Email" required />
-            <input class="input-password" type="password" name="password" placeholder="Password" required />
+            <asp:Label ID="Label1" runat="server" CssClass="input-label" Text="Email"></asp:Label>
+            <asp:TextBox ID="email" runat="server" CssClass="input-field" TextMode="Email"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server" CssClass="input-label" Text="Password"></asp:Label>
+            <asp:TextBox ID="password" runat="server" CssClass="input-password" TextMode="Password">Password</asp:TextBox>
             <button type="submit" class="auth-btn">Login</button>
             <p>Don't have an account? <a href="Register.aspx">Register Here</a></p>
         </div>

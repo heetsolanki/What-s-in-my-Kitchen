@@ -1,16 +1,19 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="SmartRecipeFinder.register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="~\StyleSheets\auth.css" rel="stylesheet" type="text/css" />
+    <link href="~/StyleSheets\auth.css" rel="stylesheet" type="text/css" />
 
     <div class="auth-container">
         <div class="auth-card register-form">
             <h1>Register</h1>
-            <input class="input-field" type="text" name="firstname" placeholder="First Name" required />
-            <input class="input-field" type="text" name="lastname" placeholder="Last Name" required />
-            <input class="input-field" type="email" name="email" placeholder="Email" required />
-            <input class="input-password" type="password" name="password" placeholder="Password" required />
-            <input class="input-password" type="password" name="verify-password" placeholder="Verify Password" required />
-            <button class="auth-btn" type="submit">Register</button>
+            <asp:Label ID="Label1" runat="server" CssClass="input-label" Text="Email"></asp:Label>
+            <asp:TextBox ID="email" runat="server" CssClass="input-field" TextMode="Email" AutoPostBack="True" ValidateRequestMode="Enabled" ></asp:TextBox>
+            <asp:Label ID="Label2" runat="server" CssClass="input-label" Text="Password"></asp:Label>
+            <asp:TextBox ID="password" runat="server" CssClass="input-password" TextMode="Password" ValidateRequestMode="Enabled">Password</asp:TextBox>
+            <asp:Label ID="Label3" runat="server" CssClass="input-label" Text="Confirm Password"></asp:Label>
+            <asp:TextBox ID="verify" runat="server" CssClass="input-password" TextMode="Password" ValidateRequestMode="Enabled">Veirfy Password</asp:TextBox>
+            <asp:Label ID="matchLabel" runat="server" Text="Passwords don't match" Visible="False" Font-Bold="True"></asp:Label>
+            <br />
+            <asp:Button ID="RegisterButton" runat="server" CssClass="auth-btn" Height="52px" OnClick="RegisterButton_Click" Text="Register" />
         </div>
     </div>
 </asp:Content>
