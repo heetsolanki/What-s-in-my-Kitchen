@@ -1,14 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="trending-recipes.aspx.cs" Inherits="SmartRecipeFinder.trendingRecipes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="recipe-page.aspx.cs" Inherits="SmartRecipeFinder.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
+    
     <div class="trending-container">
         <div class="trending-card-container">
             <div class="trending-recipe-card">
                 <img src="images/paneer-butter-masala.jpg" alt="Recipe 1">
                 <h3>Paneer Butter Masala</h3>
                 <p>Duration: 30 min</p>
-                <a href="recipe1.aspx" class="btn-primary">View Recipe</a>
+                <a href="recipe1-details.aspx" class="btn-primary">View Recipe</a>
             </div>
 
             <div class="trending-recipe-card">
@@ -29,4 +29,4 @@
         </div>
     </div>
 
-</asp:content>
+</asp:Content>

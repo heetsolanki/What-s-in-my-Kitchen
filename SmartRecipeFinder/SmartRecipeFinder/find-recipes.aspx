@@ -1,10 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="find-recipes.aspx.cs" Inherits="SmartRecipeFinder.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
-    <div class="choose-ingredients">
-        <h2>Select Ingredients : </h2>
-    </div>
+  <div class="find-recipes-header-bar">
+   <div class="choose-ingredients">
+       <h2>Select Ingredients : </h2>
+   </div>
+   <div class="find-recipes-ingredient-page">
+        <a href="recipe-page.aspx" class="btn-primary">Find recipes</a>
+   </div>
+   
+  </div>
+ 
 
     <div class="container">
         <!-- Dairy -->
