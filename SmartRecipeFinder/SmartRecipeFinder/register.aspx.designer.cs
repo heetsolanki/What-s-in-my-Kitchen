@@ -24,13 +24,13 @@ namespace SmartRecipeFinder
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// email control.
+        /// emailTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox emailTB;
 
         /// <summary>
         /// Label2 control.
@@ -42,13 +42,13 @@ namespace SmartRecipeFinder
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// password control.
+        /// passwordTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.TextBox passwordTB;
 
         /// <summary>
         /// Label3 control.
@@ -60,13 +60,13 @@ namespace SmartRecipeFinder
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// verify control.
+        /// verifyTB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox verify;
+        protected global::System.Web.UI.WebControls.TextBox verifyTB;
 
         /// <summary>
         /// matchLabel control.
