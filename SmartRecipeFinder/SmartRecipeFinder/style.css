@@ -925,3 +925,117 @@ body {
         }
 }
 
+/* User Profile Page Styling */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 40px auto;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid #fff;
+    color: #F0EAD2;
+}
+
+    .profile-container:hover {
+        box-shadow: 0px 0px 40px rgba(169, 132, 103, 2);
+    }
+
+/* Sidebar (Profile Picture, Name, Email, Logout Button) */
+.profile-sidebar {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
+    border-right: 2px solid #ddd;
+    padding: 20px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-picture:hover {
+    box-shadow: 0px 0px 20px rgba(240, 234, 210, 1);
+}
+
+    .profile-picture:hover, .profile-container:hover {
+        transition: 0.3s ease-in-out;
+        transform: scale(1.02);
+    }
+
+.username {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-email {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+/* Right Section (Account Information & Actions) */
+.profile-details {
+    flex: 2;
+    padding: 20px;
+}
+
+    .profile-details h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .profile-details p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+.favorite-recipes {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .favorite-recipes li {
+        background: #f5f5f5;
+        color: #A98467;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #F0EAD2;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-weight: bold;
+    background: #000;
+    color: white;
+}
+
+    .btn:hover {
+        transition: 0.2s ease-in-out;
+    }
+
+.btn-logout:hover {
+    box-shadow: 0px 0px 30px rgba(249, 248, 113, 1.2);
+}
+
+.btn-delete:hover {
+    box-shadow: 0px 0px 30px rgba(255, 0, 0, 1.2);
+}
+
+
+

@@ -13,23 +13,33 @@ namespace SmartRecipeFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                if (Session["email"] != null)
+                {
+                    Response.Redirect("profile.aspx");
+                }
+            }
         }
 
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
-            if (password.Text != verify.Text)
+            String email = emailTB.Text;
+            String password = passwordTB.Text;
+            String verify = verifyTB.Text;
+            if (password != verify)
             {
                 matchLabel.Visible = true;
                 matchLabel.ForeColor = System.Drawing.Color.Red;
-                verify.BorderStyle = BorderStyle.Solid;
-                verify.BorderColor = System.Drawing.Color.Red;
+                verifyTB.BorderStyle = BorderStyle.Solid;
+                verifyTB.BorderColor = System.Drawing.Color.Red;
             }
             else
             {
                 matchLabel.Visible = false;
-                email.Text = "";
-                verify.BorderColor = System.Drawing.Color.Empty;
+                emailTB.Text = "";
+                verifyTB.BorderColor = System.Drawing.Color.Empty;
+                Response.Redirect("profile.aspx");
             }
         }
     }
