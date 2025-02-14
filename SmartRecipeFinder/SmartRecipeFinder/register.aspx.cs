@@ -28,6 +28,7 @@ namespace SmartRecipeFinder
 
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
+            String name = nameTB.Text;
             String email = emailTB.Text;
             String password = passwordTB.Text;
             String verify = verifyTB.Text;
@@ -55,10 +56,11 @@ namespace SmartRecipeFinder
                 matchLabel.Visible = false;
                 emailTB.Text = "";
                 verifyTB.BorderColor = System.Drawing.Color.Empty;
-                String query = "INSERT INTO users VALUES ('"+email+"', '"+password+"')";
+                String query = "INSERT INTO users VALUES ('"+name+"', '"+email+"', '"+password+"')";
                 SqlCommand insertCommand = new SqlCommand(query, connection);
                 insertCommand.ExecuteNonQuery();
                 Session["email"] = email;
+                Session["name"] = name;
                 Response.Redirect("profile.aspx");
             }
         }

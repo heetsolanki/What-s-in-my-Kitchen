@@ -13,7 +13,32 @@ namespace SmartRecipeFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["email"] != null)
+            {
+            String email = Session["email"].ToString();
+            String name = getName();
+            String[] usernameArray = Session["email"].ToString().Split('@');
+            String username = usernameArray[0];
+            emailLabel.Text = email;
+            displayEmailLabel.Text = email;
+            displayNameLabel.Text = name;
+            usernameLabel.Text = username;
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
+        }
 
+        private string getName()
+        {
+            SqlConnection connection = new SqlConnection(@"Data Source=MONAJEWELS\BARTENDER;Initial Catalog=SmartRecipeFinder;Integrated Security=True;TrustServerCertificate=True");
+            connection.Open();
+            String email = Session["email"].ToString();
+            String query = "SELECT name FROM users WHERE email = '" + email + "'";
+            SqlCommand command = new SqlCommand(query, connection);
+            String name = Convert.ToString(command.ExecuteScalar());
+            return name;
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
