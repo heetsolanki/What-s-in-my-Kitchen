@@ -32,7 +32,7 @@ namespace SmartRecipeFinder
 
         private string getName()
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=MONAJEWELS\BARTENDER;Initial Catalog=SmartRecipeFinder;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
             connection.Open();
             String email = Session["email"].ToString();
             String query = "SELECT name FROM users WHERE email = '" + email + "'";
@@ -50,7 +50,7 @@ namespace SmartRecipeFinder
 
         protected void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=MONAJEWELS\BARTENDER;Initial Catalog=SmartRecipeFinder;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
             connection.Open();
             String email = Session["email"].ToString();
             String query = "DELETE FROM users WHERE email = '" + email + "'";

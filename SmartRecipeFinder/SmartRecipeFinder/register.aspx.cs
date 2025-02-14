@@ -32,7 +32,7 @@ namespace SmartRecipeFinder
             String email = emailTB.Text;
             String password = passwordTB.Text;
             String verify = verifyTB.Text;
-            SqlConnection connection = new SqlConnection(@"Data Source=MONAJEWELS\BARTENDER;Initial Catalog=SmartRecipeFinder;Integrated Security=True;TrustServerCertificate=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
             connection.Open();
             String checkEmail = "SELECT COUNT(*) FROM users WHERE email = '"+email+"'";
             SqlCommand command = new SqlCommand(checkEmail, connection);
