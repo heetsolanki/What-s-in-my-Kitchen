@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace SmartRecipeFinder
 {
@@ -24,9 +26,12 @@ namespace SmartRecipeFinder
         {
             String email = emailTB.Text;
             String password = passwordTB.Text;
-            String savedEmail = "login@kitchen.com";
-            String savedPassword = "admin";
-            if (email == savedEmail && password == savedPassword)
+            SqlConnection connection = new SqlConnection(@"Data Source=MONAJEWELS\BARTENDER;Initial Catalog=SmartRecipeFinder;Integrated Security=True;TrustServerCertificate=True");
+            connection.Open();
+            String query = "SELECT COUNT(*) FROM users WHERE email = '"+email+ "' AND password = '"+password+"'";
+            SqlCommand command = new SqlCommand(query, connection);
+            int count = Convert.ToInt32(command.ExecuteScalar());
+            if(count > 0)
             {
                 Session["email"] = email;
                 Response.Redirect("profile.aspx");
@@ -35,6 +40,7 @@ namespace SmartRecipeFinder
             {
                 incorrectInfo.Visible = true;
             }
+            connection.Close();
         }
     }
 }
