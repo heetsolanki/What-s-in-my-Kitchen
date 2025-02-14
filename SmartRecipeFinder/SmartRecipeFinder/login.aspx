@@ -11,7 +11,7 @@
             <asp:Label ID="Label2" runat="server" CssClass="input-label" Text="Password"></asp:Label>
             <asp:TextBox ID="passwordTB" runat="server" CssClass="input-password" TextMode="Password">Password</asp:TextBox>
             <asp:button type="submit" Cssclass="auth-btn" runat="server" Text="Login" Height="52px" ID="LoginButton" OnClick="LoginButton_Click"></asp:button>
-            <p>Don't have an account?<br /> <a href="Register.aspx">Register Here</a></p>
+            <p>Don't have an account?<br /> <a href="register.aspx">Register Here</a></p>
         </div>
     </div>
 </asp:Content>

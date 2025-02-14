@@ -5,6 +5,8 @@
     <div class="auth-container">
         <div class="auth-card register-form">
             <h1>Register</h1>
+            <asp:Label ID="Label4" runat="server" CssClass="input-label" Text="Full Name"></asp:Label>
+            <asp:TextBox ID="nameTB" runat="server" CssClass="input-field"></asp:TextBox>
             <asp:Label ID="Label1" runat="server" CssClass="input-label" Text="Email"></asp:Label>
             <asp:TextBox ID="emailTB" runat="server" CssClass="input-field" TextMode="Email" AutoPostBack="False" ValidateRequestMode="Enabled" ></asp:TextBox>
             <asp:Label ID="Label2" runat="server" CssClass="input-label" Text="Password"></asp:Label>
