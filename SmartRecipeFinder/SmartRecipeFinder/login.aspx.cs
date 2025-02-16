@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace SmartRecipeFinder
 {
@@ -26,12 +27,9 @@ namespace SmartRecipeFinder
         {
             String email = emailTB.Text;
             String password = passwordTB.Text;
-            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
-            connection.Open();
-            String query = "SELECT COUNT(*) FROM users WHERE email = '"+email+ "' AND password = '"+password+"'";
-            SqlCommand command = new SqlCommand(query, connection);
-            int count = Convert.ToInt32(command.ExecuteScalar());
-            if(count > 0)
+            String savedEmail = "login@kitchen.com";
+            String savedPassword = "admin";
+            if (email == savedEmail && password == savedPassword)
             {
                 Session["email"] = email;
                 Response.Redirect("profile.aspx");
@@ -40,7 +38,6 @@ namespace SmartRecipeFinder
             {
                 incorrectInfo.Visible = true;
             }
-            connection.Close();
         }
     }
 }
