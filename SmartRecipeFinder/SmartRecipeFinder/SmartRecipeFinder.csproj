@@ -17,8 +17,8 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44392</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="App_Data\SmartRecipeFinder.mdf" />
+    <Content Include="App_Data\SmartRecipeFinder_log.ldf">
+      <DependentUpon>SmartRecipeFinder.mdf</DependentUpon>
+    </Content>
     <Content Include="favorites.aspx" />
     <Content Include="home.aspx" />
     <Content Include="images\coding.png" />

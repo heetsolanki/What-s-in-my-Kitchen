@@ -27,9 +27,12 @@ namespace SmartRecipeFinder
         {
             String email = emailTB.Text;
             String password = passwordTB.Text;
-            String savedEmail = "login@kitchen.com";
-            String savedPassword = "admin";
-            if (email == savedEmail && password == savedPassword)
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
+            connection.Open();
+            String query = "SELECT COUNT(*) FROM users WHERE email = '" + email + "' AND password = '" + password + "'";
+            SqlCommand command = new SqlCommand(query, connection);
+            int count = Convert.ToInt32(command.ExecuteScalar());
+            if (count > 0)
             {
                 Session["email"] = email;
                 Response.Redirect("profile.aspx");
@@ -38,6 +41,7 @@ namespace SmartRecipeFinder
             {
                 incorrectInfo.Visible = true;
             }
+            connection.Close();
         }
     }
 }
