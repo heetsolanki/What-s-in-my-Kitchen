@@ -8,7 +8,7 @@
                 <img src="images/paneer-butter-masala.jpg" alt="Recipe 1">
                 <h3>Paneer Butter Masala</h3>
                 <p>Duration: 30 min</p>
-                <a href="recipe1.aspx" class="btn-primary">View Recipe</a>
+                <a href="recipe1-details.aspx" class="btn-primary">View Recipe</a>
             </div>
 
             <div class="trending-recipe-card">
