@@ -18,7 +18,7 @@
     <!-- Left Side Navigation -->
     <div class="nav-left">
         <a href="home.aspx">Home</a>
-        <a href="trending-recipes.aspx">Trending Recipes</a>
+        <a href="trending-recipes.aspx">Trending</a>
     </div>
 
     <!-- Centered Emoji Logo -->
@@ -29,7 +29,6 @@
 
     <!-- Right Side Navigation -->
     <div class="nav-right">
-    <a href="favorites.aspx" title="Favorites"><i class="fa-solid fa-heart"></i></a>
     <a href="login.aspx" title="Login"><i class="fa-solid fa-user-lock"></i></a>
     <a href="about.aspx">About Us</a>
     </div>

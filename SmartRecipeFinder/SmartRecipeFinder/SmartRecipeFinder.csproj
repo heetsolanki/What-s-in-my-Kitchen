@@ -17,8 +17,10 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44392</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -72,7 +74,6 @@
     <Content Include="App_Data\SmartRecipeFinder_log.ldf">
       <DependentUpon>SmartRecipeFinder.mdf</DependentUpon>
     </Content>
-    <Content Include="favorites.aspx" />
     <Content Include="home.aspx" />
     <Content Include="images\coding.png" />
     <Content Include="images\user-login.png" />
@@ -93,13 +94,6 @@
     </Compile>
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="favorites.aspx.cs">
-      <DependentUpon>favorites.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="favorites.aspx.designer.cs">
-      <DependentUpon>favorites.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
