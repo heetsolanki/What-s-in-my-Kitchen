@@ -5,30 +5,62 @@
     <div class="recipe-details-container">
         <div class="recipe-details">
            
-            <h2>Paneer Butter Masala</h2>
-            <p><strong>Duration :</strong> 30 min</p>
-            <h3>Ingredients :</h3>
-            <ul>
-                <li> Paneer</li>
-                <li> Butter</li>
-                <li> Tomato</li>
-                <li> Onion</li>
-                <li> Spices</li>
-                <li> Ghee</li>
-            </ul>
-            <h3>Cooking Process:</h3>
-            <p>1. Heat butter and ghee in a pan.</p>
-            <p>2. Add onions, tomatoes, and cook until soft.</p>
-            <p>3. Add spices and cook for a few minutes.</p>
-            <p>4. Add paneer and cook until tender.</p>
-            <p>5. Serve hot with naan or rice.</p>
+                <h2>
+        <asp:Label ID="recipeNameLabel" runat="server" Text="Label"></asp:Label>
+    </h2>
+    <p><strong>Duration :</strong>&nbsp;
+        <asp:Label ID="durationLabel" runat="server" Text="Label"></asp:Label>
+    </p>
+    <h3>Ingredients :</h3>
+    <ul>
+        <li> 
+            <asp:Label ID="ingredientLabel1" runat="server" Text="Label"></asp:Label>
+        </li>
+        <li> 
+            <asp:Label ID="ingredientLabel2" runat="server" Text="Label"></asp:Label>
+        </li>
+        <li> 
+            <asp:Label ID="ingredientLabel3" runat="server" Text="Label"></asp:Label>
+        </li>
+        <li> 
+            <asp:Label ID="ingredientLabel4" runat="server" Text="Label"></asp:Label>
+        </li>
+        <li> 
+            <asp:Label ID="ingredientLabel5" runat="server" Text="Label"></asp:Label>
+        </li>
+        <li> 
+            <asp:Label ID="ingredientLabel6" runat="server" Text="Label"></asp:Label>
+        </li>
+    </ul>
+    <h3>Cooking Process:</h3>
+    <p>
+        <asp:Label ID="cookingStepLabel1" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p>
+        <asp:Label ID="cookingStepLabel2" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p>
+        <asp:Label ID="cookingStepLabel3" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p>
+        <asp:Label ID="cookingStepLabel4" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p>
+        <asp:Label ID="cookingStepLabel5" runat="server" Text="Label"></asp:Label>
+    </p>
 
-            <h3>Nutritional Value:</h3>
-            <p><strong>Calories :</strong> 250 kcal</p>
-            <p><strong>Protein :</strong> 15g</p>
-            <p><strong>Fat :</strong> 20g</p>
-        </div>
-         <img src="images/paneer-butter-masala.jpg" alt="Paneer Butter Masala">
+    <h3>Nutritional Value:</h3>
+    <p><strong>Calories :</strong> 
+        <asp:Label ID="caloriesLabel" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p><strong>Protein :</strong> 
+        <asp:Label ID="proteinLabel" runat="server" Text="Label"></asp:Label>
+    </p>
+    <p><strong>Fat :</strong> 
+        <asp:Label ID="fatLabel" runat="server" Text="Label"></asp:Label>
+    </p>
+</div>
+ <asp:Image ID="recipeImage" runat="server" />
     </div>
 
 

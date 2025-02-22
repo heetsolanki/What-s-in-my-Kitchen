@@ -296,6 +296,8 @@ body {
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border: none;
 }
 
     .btn-fav:hover, .btn-primary:hover {
@@ -1130,4 +1132,8 @@ body {
         min-width: 70px; /* Adjust ingredient size */
         max-width: 90px; /* Adjust ingredient size */
     }
+}
+
+.gridview th, td {
+    padding: 8px;
 }
