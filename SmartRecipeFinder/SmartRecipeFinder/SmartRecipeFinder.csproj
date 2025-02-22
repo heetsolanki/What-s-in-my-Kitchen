@@ -79,8 +79,18 @@
     <Content Include="trending-recipes.aspx" />
     <Content Include="Web.config" />
     <Content Include="find-recipes.aspx" />
-    <Content Include="recipe-page.aspx" />
     <Content Include="recipe1-details.aspx" />
+    <Content Include="Paneer - Tomato - Olive Oil.aspx" />
+    <Content Include="Cheese - Potato - Peanut Oil.aspx" />
+    <Content Include="Butter - Barley - Mango.aspx" />
+    <Content Include="Almond - Chickpeas - Canola Oil.aspx" />
+    <Content Include="Flax Seeds - Rice - Sesame Oil.aspx" />
+    <Content Include="Cashew - Lentils - Corn Oil.aspx" />
+    <Content Include="Milk- Carrot - Apple.aspx" />
+    <Content Include="Grapes- Oats - Chia Seeds.aspx" />
+    <Content Include="Onion - Peas - Beans.aspx" />
+    <Content Include="Banana - Wheat.aspx" />
+    <Content Include="updating-soon-page.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about.aspx.cs">
@@ -140,19 +150,89 @@
     <Compile Include="find-recipes.aspx.designer.cs">
       <DependentUpon>find-recipes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="recipe-page.aspx.cs">
-      <DependentUpon>recipe-page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="recipe-page.aspx.designer.cs">
-      <DependentUpon>recipe-page.aspx</DependentUpon>
-    </Compile>
     <Compile Include="recipe1-details.aspx.cs">
       <DependentUpon>recipe1-details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="recipe1-details.aspx.designer.cs">
       <DependentUpon>recipe1-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paneer - Tomato - Olive Oil.aspx.cs">
+      <DependentUpon>Paneer - Tomato - Olive Oil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paneer - Tomato - Olive Oil.aspx.designer.cs">
+      <DependentUpon>Paneer - Tomato - Olive Oil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cheese - Potato - Peanut Oil.aspx.cs">
+      <DependentUpon>Cheese - Potato - Peanut Oil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cheese - Potato - Peanut Oil.aspx.designer.cs">
+      <DependentUpon>Cheese - Potato - Peanut Oil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Butter - Barley - Mango.aspx.cs">
+      <DependentUpon>Butter - Barley - Mango.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Butter - Barley - Mango.aspx.designer.cs">
+      <DependentUpon>Butter - Barley - Mango.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Almond - Chickpeas - Canola Oil.aspx.cs">
+      <DependentUpon>Almond - Chickpeas - Canola Oil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Almond - Chickpeas - Canola Oil.aspx.designer.cs">
+      <DependentUpon>Almond - Chickpeas - Canola Oil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flax Seeds - Rice - Sesame Oil.aspx.cs">
+      <DependentUpon>Flax Seeds - Rice - Sesame Oil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flax Seeds - Rice - Sesame Oil.aspx.designer.cs">
+      <DependentUpon>Flax Seeds - Rice - Sesame Oil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cashew - Lentils - Corn Oil.aspx.cs">
+      <DependentUpon>Cashew - Lentils - Corn Oil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cashew - Lentils - Corn Oil.aspx.designer.cs">
+      <DependentUpon>Cashew - Lentils - Corn Oil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Milk- Carrot - Apple.aspx.cs">
+      <DependentUpon>Milk- Carrot - Apple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Milk- Carrot - Apple.aspx.designer.cs">
+      <DependentUpon>Milk- Carrot - Apple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Grapes- Oats - Chia Seeds.aspx.cs">
+      <DependentUpon>Grapes- Oats - Chia Seeds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Grapes- Oats - Chia Seeds.aspx.designer.cs">
+      <DependentUpon>Grapes- Oats - Chia Seeds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Onion - Peas - Beans.aspx.cs">
+      <DependentUpon>Onion - Peas - Beans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Onion - Peas - Beans.aspx.designer.cs">
+      <DependentUpon>Onion - Peas - Beans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Banana - Wheat.aspx.cs">
+      <DependentUpon>Banana - Wheat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Banana - Wheat.aspx.designer.cs">
+      <DependentUpon>Banana - Wheat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updating-soon-page.aspx.cs">
+      <DependentUpon>updating-soon-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updating-soon-page.aspx.designer.cs">
+      <DependentUpon>updating-soon-page.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
