@@ -11,7 +11,7 @@ namespace SmartRecipeFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["recipe"] = 0;
         }
         protected void viewRecipe13_Click(object sender, EventArgs e)
         {
