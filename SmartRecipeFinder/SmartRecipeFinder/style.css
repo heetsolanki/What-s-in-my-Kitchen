@@ -300,6 +300,7 @@ body {
     border: none;
 }
 
+
     .btn-fav:hover, .btn-primary:hover {
         background-color: #3E2723;
         transform: scale(1.05);

@@ -33,6 +33,15 @@ namespace SmartRecipeFinder
         protected global::System.Web.UI.WebControls.Label durationLabel;
 
         /// <summary>
+        /// favBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton favBtn;
+
+        /// <summary>
         /// ingredientLabel1 control.
         /// </summary>
         /// <remarks>
@@ -78,15 +87,6 @@ namespace SmartRecipeFinder
         protected global::System.Web.UI.WebControls.Label ingredientLabel5;
 
         /// <summary>
-        /// ingredientLabel6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ingredientLabel6;
-
-        /// <summary>
         /// cookingStepLabel1 control.
         /// </summary>
         /// <remarks>
@@ -130,6 +130,15 @@ namespace SmartRecipeFinder
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label cookingStepLabel5;
+
+        /// <summary>
+        /// cookingStepLabel6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label cookingStepLabel6;
 
         /// <summary>
         /// caloriesLabel control.

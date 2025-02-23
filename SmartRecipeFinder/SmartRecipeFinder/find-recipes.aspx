@@ -6,7 +6,7 @@
        <h2>Select Ingredients : </h2>
    </div>
    <div class="find-recipes-ingredient-page">
-        <a href="recipe-page.aspx" class="btn-primary">Find recipes</a>
+        &nbsp;<asp:Button ID="findRecipesBtn" runat="server" CssClass="btn-primary" Height="52px" OnClick="findRecipesBtn_Click" Text="Find Recipes" Width="160px" />
    </div>
    
   </div>

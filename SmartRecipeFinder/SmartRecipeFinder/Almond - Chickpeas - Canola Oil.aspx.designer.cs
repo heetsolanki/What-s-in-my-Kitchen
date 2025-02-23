@@ -15,57 +15,57 @@ namespace SmartRecipeFinder
     {
 
         /// <summary>
-        /// recipeBtn1 control.
+        /// viewRecipe16 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button recipeBtn1;
+        protected global::System.Web.UI.WebControls.Button viewRecipe16;
 
         /// <summary>
-        /// hiddenLabel1 control.
+        /// hiddenLabel16 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label hiddenLabel1;
+        protected global::System.Web.UI.WebControls.Label hiddenLabel16;
 
         /// <summary>
-        /// recipeBtn2 control.
+        /// viewRecipe17 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button recipeBtn2;
+        protected global::System.Web.UI.WebControls.Button viewRecipe17;
 
         /// <summary>
-        /// hiddenLabel2 control.
+        /// hiddenLabel17 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label hiddenLabel2;
+        protected global::System.Web.UI.WebControls.Label hiddenLabel17;
 
         /// <summary>
-        /// recipeBtn3 control.
+        /// viewRecipe18 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button recipeBtn3;
+        protected global::System.Web.UI.WebControls.Button viewRecipe18;
 
         /// <summary>
-        /// hiddenLabel3 control.
+        /// hiddenLabel18 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label hiddenLabel3;
+        protected global::System.Web.UI.WebControls.Label hiddenLabel18;
     }
 }

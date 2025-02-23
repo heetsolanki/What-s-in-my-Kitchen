@@ -12,7 +12,7 @@ namespace SmartRecipeFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\local copy\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf"";Integrated Security=True");
+            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
             connection.Open();
             int recipeId = Convert.ToInt32(Session["recipe"]);
             String fetchRecipe = "SELECT COUNT(*) FROM [recipe-details] WHERE Id = '" + recipeId + "'";
@@ -20,34 +20,55 @@ namespace SmartRecipeFinder
             int recipeCount = (int)findRecipe.ExecuteScalar();
             if (recipeCount == 1)
             {
-                recipeNameLabel.Text = getValue("recipe-name", recipeId);
-                durationLabel.Text = getValue("duration", recipeId);
-                ingredientLabel1.Text = getValue("ingredient-1", recipeId);
-                ingredientLabel2.Text = getValue("ingredient-2", recipeId);
-                ingredientLabel3.Text = getValue("ingredient-3", recipeId);
-                ingredientLabel4.Text = getValue("ingredient-4", recipeId);
-                ingredientLabel5.Text = getValue("ingredient-5", recipeId);
-                ingredientLabel6.Text = getValue("ingredient-6", recipeId);
-                cookingStepLabel1.Text = getValue("step-1", recipeId);
-                cookingStepLabel2.Text = getValue("step-2", recipeId);
-                cookingStepLabel3.Text = getValue("step-3", recipeId);
-                cookingStepLabel4.Text = getValue("step-4", recipeId);
-                cookingStepLabel5.Text = getValue("step-5", recipeId);
-                caloriesLabel.Text = getValue("calories", recipeId);
-                proteinLabel.Text = getValue("protein", recipeId);
-                fatLabel.Text = getValue("fat", recipeId);
-                recipeImage.ImageUrl = getValue("image", recipeId);
-                recipeImage.AlternateText = getValue("alt-text", recipeId);
+                recipeNameLabel.Text = getValue(recipeNameLabel, "recipe-name", recipeId);
+                durationLabel.Text = getValue(durationLabel, "duration", recipeId);
+                ingredientLabel1.Text = getValue(ingredientLabel1, "ingredient-1", recipeId);
+                ingredientLabel2.Text = getValue(ingredientLabel2, "ingredient-2", recipeId);
+                ingredientLabel3.Text = getValue(ingredientLabel3, "ingredient-3", recipeId);
+                ingredientLabel4.Text = getValue(ingredientLabel4, "ingredient-4", recipeId);
+                ingredientLabel5.Text = getValue(ingredientLabel5, "ingredient-5", recipeId);
+                cookingStepLabel1.Text = getValue(cookingStepLabel1, "step-1", recipeId);
+                cookingStepLabel2.Text = getValue(cookingStepLabel2, "step-2", recipeId);
+                cookingStepLabel3.Text = getValue(cookingStepLabel3, "step-3", recipeId);
+                cookingStepLabel4.Text = getValue(cookingStepLabel4, "step-4", recipeId);
+                cookingStepLabel5.Text = getValue(cookingStepLabel5, "step-5", recipeId);
+                cookingStepLabel6.Text = getValue(cookingStepLabel6, "step-6", recipeId);
+                caloriesLabel.Text = getValue(caloriesLabel, "calories", recipeId);
+                proteinLabel.Text = getValue(proteinLabel, "protein", recipeId);
+                fatLabel.Text = getValue(fatLabel, "fat", recipeId);
+                recipeImage.ImageUrl = getImage("image", recipeId);
+                recipeImage.AlternateText = getImage("alt-text", recipeId);
             }
         }
-        private String getValue(String recipe, int recipeId)
+        private String getValue(Label label, String recipe, int recipeId)
         {
-            SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\local copy\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf"";Integrated Security=True");
-            connection.Open();
-            String query = $"SELECT [{recipe}] FROM [recipe-details] WHERE Id = {recipeId}";
-            SqlCommand command = new SqlCommand(query, connection);
-            String name = command.ExecuteScalar().ToString();
-            connection.Close();
+            String query = "";
+            String name = "";
+            if(recipe != null)
+            {
+                label.Visible = true;
+                SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
+                connection.Open();
+                query = $"SELECT [{recipe}] FROM [recipe-details] WHERE Id = {recipeId}";
+                SqlCommand command = new SqlCommand(query, connection);
+                name = command.ExecuteScalar().ToString();
+                connection.Close();
+            }
+                return name;
+        }
+        private String getImage(String recipe, int recipeId)
+        {
+            String query = "";
+            String name = null;
+            if (recipe != null)
+            {
+                SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
+                connection.Open();
+                query = $"SELECT [{recipe}] FROM [recipe-details] WHERE Id = {recipeId}";
+                SqlCommand command = new SqlCommand(query, connection);
+                name = command.ExecuteScalar().ToString();
+                connection.Close();
+            }
             return name;
         }
     }
