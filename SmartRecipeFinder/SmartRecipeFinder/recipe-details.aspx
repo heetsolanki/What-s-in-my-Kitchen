@@ -11,7 +11,7 @@
         <asp:Label ID="durationLabel" runat="server" Text="Label"></asp:Label>
     </p>
                 <br />
-        <asp:LinkButton ID="favBtn" runat="server" CssClass="btn-fav" ToolTip="Add to Favorite">
+        <asp:LinkButton ID="favBtn" runat="server" CssClass="btn-fav" ToolTip="Add to Favorite" OnClick="favBtn_Click">
             <i class="fa-regular fa-heart"></i>
         </asp:LinkButton>
     <h3>Ingredients :</h3>

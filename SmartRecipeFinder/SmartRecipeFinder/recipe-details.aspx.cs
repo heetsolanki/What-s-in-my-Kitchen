@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -70,6 +71,52 @@ namespace SmartRecipeFinder
                 connection.Close();
             }
             return name;
+        }
+
+        protected void favBtn_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True"))
+            {
+                connection.Open();
+
+                if (Session["userId"] != null)
+                {
+                    string recipeName = recipeNameLabel.Text;
+                    int userId = Convert.ToInt32(Session["userId"]);
+
+                    // Check if the recipe is already a favorite
+                    string chkRecipe = "SELECT COUNT(*) FROM [favorite-recipe] WHERE [recipe-name] = @recipeName AND userId = @userId";
+                    using (SqlCommand chkCommand = new SqlCommand(chkRecipe, connection))
+                    {
+                        chkCommand.Parameters.AddWithValue("@recipeName", recipeName);
+                        chkCommand.Parameters.AddWithValue("@userId", userId);
+                        int count = Convert.ToInt32(chkCommand.ExecuteScalar());
+
+                        if (count > 0)
+                        {
+                            ClientScript.RegisterStartupScript(this.GetType(), "alertScript", "alert('This recipe is already a favorite!');", true);
+                        }
+                        else
+                        {
+                            // Insert the recipe into favorites
+                            string query = "INSERT INTO [favorite-recipe] ([recipe-name], [userId]) VALUES (@recipeName, @userId)";
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@recipeName", recipeName);
+                                command.Parameters.AddWithValue("@userId", userId);
+                                command.ExecuteNonQuery();
+                            }
+
+                            ClientScript.RegisterStartupScript(this.GetType(), "alertScript", "alert('Recipe added to favorites!');", true);
+                        }
+                    }
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertScript", "alert('Please log in first');", true);
+                    Response.Redirect("login.aspx");
+                }
+            }
         }
     }
 }

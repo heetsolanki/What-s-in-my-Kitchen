@@ -12,7 +12,8 @@ namespace SmartRecipeFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["email"] != null)
+            int userId = Convert.ToInt32(Session["userId"]);
+            if (Session["userId"] != null)
             {
                 String email = Session["email"].ToString();
                 String name = getName();
@@ -22,9 +23,12 @@ namespace SmartRecipeFinder
                 displayEmailLabel.Text = email;
                 displayNameLabel.Text = name;
                 usernameLabel.Text = username;
+                SqlDataSource1.SelectParameters["userId"].DefaultValue = userId.ToString();
+                SqlDataSource1.DataBind();
             }
             else
             {
+                Session.Clear();
                 Response.Redirect("login.aspx");
             }
         }
@@ -52,6 +56,10 @@ namespace SmartRecipeFinder
             SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
             connection.Open();
             String email = Session["email"].ToString();
+            int userId = Convert.ToInt32(Session["userId"]);
+            String deleteRecipe = "DELETE FROM [favorite-recipe] WHERE userId = '" + userId + "'";
+            SqlCommand deleteCommand = new SqlCommand(deleteRecipe, connection);
+            deleteCommand.ExecuteNonQuery();
             String query = "DELETE FROM users WHERE email = '" + email + "'";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();

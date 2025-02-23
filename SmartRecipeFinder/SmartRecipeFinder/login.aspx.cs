@@ -21,6 +21,7 @@ namespace SmartRecipeFinder
                     Response.Redirect("profile.aspx");
                 }
             }
+            Session.Clear();
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
@@ -34,6 +35,11 @@ namespace SmartRecipeFinder
             int count = Convert.ToInt32(command.ExecuteScalar());
             if (count > 0)
             {
+                String fetchUserId = "SELECT Id FROM users WHERE email = '" + email + "'";
+                SqlCommand userIdCommand = new SqlCommand(fetchUserId, connection);
+                Object userIdObj = userIdCommand.ExecuteScalar();
+                int userId = Convert.ToInt32(userIdObj);
+                Session["userId"] = userId;
                 Session["email"] = email;
                 Response.Redirect("profile.aspx");
             }

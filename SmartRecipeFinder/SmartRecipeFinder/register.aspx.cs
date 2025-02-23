@@ -22,6 +22,7 @@ namespace SmartRecipeFinder
                     Response.Redirect("profile.aspx");
                 }
             }
+            Session.Clear();
         }
 
         protected void RegisterButton_Click(object sender, EventArgs e)
