@@ -86,8 +86,8 @@
     <Content Include="Almond - Chickpeas - Canola Oil.aspx" />
     <Content Include="Flax Seeds - Rice - Sesame Oil.aspx" />
     <Content Include="Cashew - Lentils - Corn Oil.aspx" />
-    <Content Include="Milk- Carrot - Apple.aspx" />
-    <Content Include="Grapes- Oats - Chia Seeds.aspx" />
+    <Content Include="Milk - Carrot - Apple.aspx" />
+    <Content Include="Grapes - Oats - Chia Seeds.aspx" />
     <Content Include="Onion - Peas - Beans.aspx" />
     <Content Include="Banana - Wheat.aspx" />
     <Content Include="updating-soon-page.aspx" />
@@ -199,19 +199,19 @@
     <Compile Include="Cashew - Lentils - Corn Oil.aspx.designer.cs">
       <DependentUpon>Cashew - Lentils - Corn Oil.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Milk- Carrot - Apple.aspx.cs">
-      <DependentUpon>Milk- Carrot - Apple.aspx</DependentUpon>
+    <Compile Include="Milk - Carrot - Apple.aspx.cs">
+      <DependentUpon>Milk - Carrot - Apple.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Milk- Carrot - Apple.aspx.designer.cs">
-      <DependentUpon>Milk- Carrot - Apple.aspx</DependentUpon>
+    <Compile Include="Milk - Carrot - Apple.aspx.designer.cs">
+      <DependentUpon>Milk - Carrot - Apple.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Grapes- Oats - Chia Seeds.aspx.cs">
-      <DependentUpon>Grapes- Oats - Chia Seeds.aspx</DependentUpon>
+    <Compile Include="Grapes - Oats - Chia Seeds.aspx.cs">
+      <DependentUpon>Grapes - Oats - Chia Seeds.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Grapes- Oats - Chia Seeds.aspx.designer.cs">
-      <DependentUpon>Grapes- Oats - Chia Seeds.aspx</DependentUpon>
+    <Compile Include="Grapes - Oats - Chia Seeds.aspx.designer.cs">
+      <DependentUpon>Grapes - Oats - Chia Seeds.aspx</DependentUpon>
     </Compile>
     <Compile Include="Onion - Peas - Beans.aspx.cs">
       <DependentUpon>Onion - Peas - Beans.aspx</DependentUpon>

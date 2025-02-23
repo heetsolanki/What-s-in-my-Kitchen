@@ -114,7 +114,6 @@ namespace SmartRecipeFinder
                 else
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "alertScript", "alert('Please log in first');", true);
-                    Response.Redirect("login.aspx");
                 }
             }
         }

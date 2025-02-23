@@ -13,5 +13,20 @@ namespace SmartRecipeFinder
         {
 
         }
+        protected void viewRecipe22_Click(object sender, EventArgs e)
+        {
+            Session["recipe"] = Convert.ToInt32(hiddenLabel22.Text);
+            Response.Redirect("recipe-details.aspx");
+        }
+        protected void viewRecipe12_Click(object sender, EventArgs e)
+        {
+            Session["recipe"] = Convert.ToInt32(hiddenLabel12.Text);
+            Response.Redirect("recipe-details.aspx");
+        }
+        protected void viewRecipe29_Click(object sender, EventArgs e)
+        {
+            Session["recipe"] = Convert.ToInt32(hiddenLabel29.Text);
+            Response.Redirect("recipe-details.aspx");
+        }
     }
 }
