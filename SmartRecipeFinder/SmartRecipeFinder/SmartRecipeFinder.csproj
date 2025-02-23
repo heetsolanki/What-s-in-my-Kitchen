@@ -79,7 +79,7 @@
     <Content Include="trending-recipes.aspx" />
     <Content Include="Web.config" />
     <Content Include="find-recipes.aspx" />
-    <Content Include="recipe1-details.aspx" />
+    <Content Include="recipe-details.aspx" />
     <Content Include="Paneer - Tomato - Olive Oil.aspx" />
     <Content Include="Cheese - Potato - Peanut Oil.aspx" />
     <Content Include="Butter - Barley - Mango.aspx" />
@@ -150,12 +150,12 @@
     <Compile Include="find-recipes.aspx.designer.cs">
       <DependentUpon>find-recipes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="recipe1-details.aspx.cs">
-      <DependentUpon>recipe1-details.aspx</DependentUpon>
+    <Compile Include="recipe-details.aspx.cs">
+      <DependentUpon>recipe-details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="recipe1-details.aspx.designer.cs">
-      <DependentUpon>recipe1-details.aspx</DependentUpon>
+    <Compile Include="recipe-details.aspx.designer.cs">
+      <DependentUpon>recipe-details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Paneer - Tomato - Olive Oil.aspx.cs">
       <DependentUpon>Paneer - Tomato - Olive Oil.aspx</DependentUpon>

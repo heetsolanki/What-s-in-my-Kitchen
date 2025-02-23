@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="recipe1-details.aspx.cs" Inherits="SmartRecipeFinder.WebForm3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="recipe-details.aspx.cs" Inherits="SmartRecipeFinder.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <!DOCTYPE html>
     <div class="recipe-details-container">
