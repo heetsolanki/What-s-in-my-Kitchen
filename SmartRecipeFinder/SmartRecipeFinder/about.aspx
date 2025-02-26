@@ -29,13 +29,13 @@ No more last-minute grocery runs!
             <div class="developer-card">
                 <img src="images\coding.png" alt="Developer 1" />
                 <h3 class="developer-name">Heet Solanki</h3>
-                <p class="developer-bio">Big Brain with Big Muscles</p>
+                <p class="developer-bio">Passionate about coding and creating innovative solutions.</p>
             </div>
 
             <div class="developer-card">
                 <img src="images\coding.png" alt="Developer 2" />
                 <h3 class="developer-name">Rishit Singh</h3>
-                <p class="developer-bio">Handsome Chocolate Boy.</p>
+                <p class="developer-bio">Loves developing and bringing ideas to life through technology.</p>
             </div>
         </div>
     </section>

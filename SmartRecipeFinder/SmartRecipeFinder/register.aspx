@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="SmartRecipeFinder.register" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="~/StyleSheets\auth.css" rel="stylesheet" type="text/css" />
 
     <div class="auth-container">
         <div class="auth-card register-form">
