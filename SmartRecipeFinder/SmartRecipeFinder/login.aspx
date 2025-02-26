@@ -4,7 +4,7 @@
     <div class="auth-container">
         <div class="auth-card">
             <h1>Login</h1>
-            <asp:Label ID="incorrectInfo" runat="server" Font-Bold="True" ForeColor="Red" Text="Incorrect Email or Password" Visible="False"></asp:Label>
+            <asp:Label ID="incorrectInfo" runat="server" Font-Bold="True" ForeColor="Red" Text="" Visible="False"></asp:Label>
             <asp:Label ID="Label1" runat="server" CssClass="input-label" Text="Email"></asp:Label>
             <asp:TextBox ID="emailTB" runat="server" CssClass="input-field" TextMode="Email"></asp:TextBox>
             <asp:Label ID="Label2" runat="server" CssClass="input-label" Text="Password"></asp:Label>

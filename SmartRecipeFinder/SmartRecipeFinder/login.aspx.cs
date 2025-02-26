@@ -14,6 +14,7 @@ namespace SmartRecipeFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            incorrectInfo.Visible = false;
             if (!IsPostBack)
             {
                 if (Session["email"] != null)
@@ -26,6 +27,7 @@ namespace SmartRecipeFinder
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
+            incorrectInfo.Visible = false;
             String email = emailTB.Text;
             String password = passwordTB.Text;
             SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
@@ -45,7 +47,19 @@ namespace SmartRecipeFinder
             }
             else
             {
-                incorrectInfo.Visible = true;
+                String chkEmail = "SELECT COUNT(*) FROM users WHERE email = '" + email + "'";
+                SqlCommand chkEmailCmd = new SqlCommand(chkEmail, connection);
+                int emailCount = Convert.ToInt32(chkEmailCmd.ExecuteScalar());
+                if(emailCount == 0)
+                {
+                    incorrectInfo.Text = "Email not found";
+                    incorrectInfo.Visible = true;
+                }
+                else
+                {
+                    incorrectInfo.Text = "Incorrect password";
+                    incorrectInfo.Visible = true;
+                }
             }
             connection.Close();
         }

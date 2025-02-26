@@ -1,11 +1,10 @@
 ﻿/* ------------------ Master Page ------------------ */
 
-/* ------------------ Reset Styles ------------------ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font to the whole page */
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -18,9 +17,9 @@ body {
     display: flex;
     flex-direction: column;
     transition: background-color 0.4s ease;
-    padding: 0 0px; /* Adds padding to the body */
+    padding: 0 0px;
 
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/website-background-image.jpg'); /* Darkens the image */
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('images/website-background-image.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -34,8 +33,6 @@ body {
 .navbar {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,9 +43,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     width: calc(100% - 60px);
     margin: 10px 30px 50px 30px;
-    border: solid;
-    border-width: 2px;
-    border-color: white;
+    border: 2px solid #fff;
     border-radius: 50px;
     transition: background-color 0.3s ease;
 }
@@ -66,7 +61,6 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 1rem;
-    transition: transform 0.3s ease;
 }
 
 /* Navbar Left */
@@ -101,10 +95,9 @@ body {
     align-items: center;
     justify-content: center;
     height: 60px;
-    cursor: pointer; /* Adding cursor to show that the logo is clickable */
+    cursor: pointer;
 }
 
-/* Keep the existing logo styles */
 @keyframes fire-glow {
     0% {
         filter: drop-shadow(0 0 5px orange);
@@ -146,7 +139,6 @@ body {
 
 /* ------------------ Background and Content Container ------------------ */
 .content-container {
-    flex: 1;
     max-width: 1200px;
     margin: 30px auto;
     padding: 20px;
@@ -158,9 +150,6 @@ body {
 
 /* Home Page - Hero Section */
 .hero-section {
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Keeps the image fixed when scrolling */
     color: white;
     padding: 50px 20px;
     text-align: center;
@@ -195,21 +184,21 @@ body {
 /* Features Section */
 .features {
     display: flex;
-    justify-content: space-between; /* Ensures the cards are spaced evenly */
+    justify-content: space-between;
     margin: 50px 0;
     padding: 20px;
     text-align: center;
 }
 
 .feature-card {
-    background-color: #F1E1C6; /* Lighter shade for card background */
-    color: #6C584C; /* Text color matching the theme */
+    background-color: #F1E1C6;
+    color: #6C584C;
     padding: 20px;
-    border-radius: 10px; /* Slightly more rounded corners for better aesthetic */
+    border-radius: 10px; 
     width: 30%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
-    margin: 0 15px; /* Space between cards */
+    margin: 0 15px;
 }
 
     .feature-card h2 {
@@ -224,66 +213,8 @@ body {
     }
 
     .feature-card:hover {
-        transform: scale(1.05); /* Slightly enlarges the card on hover */
+        transform: scale(1.05);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .features {
-        flex-direction: column; /* Stack cards vertically on small screens */
-        align-items: center;
-    }
-
-    .feature-card {
-        width: 80%; /* Cards take up more space on small screens */
-        margin-bottom: 20px;
-    }
-}
-
-/* ------------------ Common Styles for Recipe Cards ------------------ */
-.fav-recipe-cards-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-/* Recipe Card Style */
-.fav-recipe-card {
-    background-color: #F5F5F5; /* Lighter card color */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-    .fav-recipe-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .fav-recipe-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 15px;
-    }
-
-    .fav-recipe-card h2 {
-        font-size: 1.5rem;
-        color: #7A6012;
-        margin-bottom: 10px;
-    }
-
-    .fav-recipe-card p {
-        font-size: 1rem;
-        color: #6C584C;
-        margin-bottom: 15px;
     }
 
 /* ------------------ Button Styles ------------------ */
@@ -295,7 +226,7 @@ body {
     text-decoration: none;
     font-size: 1rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     border: none;
 }
@@ -306,20 +237,6 @@ body {
         transform: scale(1.05);
     }
 
-/* ------------------ Favorites Page Specific Styles ------------------ */
-.favorites-container {
-    text-align: center;
-}
-
-    .favorites-container h1 {
-        font-size: 2.5rem;
-        color: #7A6012;
-        margin-bottom: 30px;
-    }
-
-    .favorites-container .recipe-cards-wrapper {
-        justify-content: center; /* Centering cards in the wrapper */
-    }
 
 /* ------------------ Trending Recipes Page Specific Styles ------------------ */
 
@@ -356,7 +273,7 @@ body {
         width: 100%;
         height: 200px;
         border-radius: 40px;
-        object-fit: cover
+        object-fit: cover;
     }
 
     .trending-recipe-card h3 {
@@ -371,43 +288,6 @@ body {
         color: #F0EAD2;
     }
 
-
-
-
-
-
-
-
-
-
-/* ------------------ Responsive Styles ------------------ */
-
-/* For mobile devices */
-@media (max-width: 768px) {
-    .recipe-card {
-        width: 100%;
-    }
-
-    .recipe-cards-wrapper {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-/* For very small screens */
-@media (max-width: 480px) {
-    .favorites-container h1 {
-        font-size: 2rem;
-    }
-
-    .recipe-card h2 {
-        font-size: 1.25rem;
-    }
-
-    .recipe-card p {
-        font-size: 0.9rem;
-    }
-}
 
 /* Full-page container */
 .auth-container {
@@ -503,26 +383,14 @@ body {
     color: #A98467;
 }
 
-.auth-card a {
-    color: #FFD700; /* Gold color */
+.auth-card a, .back-to-login-text {
+    color: #FFD700; 
     font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
 }
 
-    .auth-card a:hover {
-        color: #FFC107;
-        text-decoration: underline;
-    }
-
-.back-to-login-text {
-    color: #FFD700; /* Gold color */
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s
-}
-
-    .back-to-login-text :hover {
+    .auth-card a:hover, .back-to-login-text:hover {
         color: #FFC107;
         text-decoration: underline;
     }
@@ -596,13 +464,12 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
-    flex-wrap: wrap;
     margin-top: 20px;
 }
 
 /* Developer Card */
 .developer-card {
-    background-color: #F7E0B2; /* Lighter color */
+    background-color: #F7E0B2;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -646,7 +513,7 @@ body {
 }
 
 .project-info-card {
-    background-color: #F5F5DC; /* Lighter beige color */
+    background-color: #F5F5DC;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -711,7 +578,7 @@ body {
 
 
 #oils-card {
-    grid-column: span 3; /* Makes it stretch across all columns */
+    grid-column: span 3;
 }
 
 
@@ -748,10 +615,9 @@ body {
     cursor: pointer;
     border-radius: 50px;
     transition: border-radius, background-color 0.3s ease, color 0.3s ease;
-    min-width: 100px; /* Prevents text from squeezing too much */
-    max-width: 200px; /* Ensures uniform width */
+    min-width: 100px;
+    max-width: 200px;
     text-align: center;
-    white-space: nowrap;
 }
 
     .ingredient:hover {
@@ -759,52 +625,8 @@ body {
         background-color: #f0f0f0;
     }
 
-    .ingredient.selected {
-        background-color: #4caf50;
-        color: white;
-    }
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    #oils-card {
-        grid-column: span 2; /* Full width in smaller screens */
-    }
-
-    .ingredient {
-        min-width: 90px;
-        max-width: 110px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    #oils-card {
-        grid-column: span 1; /* Full width on single column layout */
-    }
-
-    .ingredient {
-        min-width: 80px;
-        max-width: 100px;
-    }
-}
-
-@media (max-width: 480px) {
-    .ingredient {
-        width: 100%; /* Full width on small screens */
-    }
-}
-
 
 /* RECIPE DETAILS PAGE */
-
-/* Reset default styles */
 
 
 .recipe-details-container {
@@ -826,8 +648,8 @@ body {
 
 .recipe-details {
     text-align: left;
-    padding: 20px 20px 10px 20px; /* Increased padding for larger content */
-    width: 80%; /* Adjust the width of the container to make it larger */
+    padding: 20px 20px 10px 20px;
+    width: 80%;
 }
 
     /* Heading styles */
@@ -896,26 +718,6 @@ body {
             transform: translateY(-50%);
         }
 
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .recipe-details {
-        padding: 15px;
-    }
-
-        .recipe-details h2 {
-            font-size: 1.8rem;
-        }
-
-        .recipe-details h3 {
-            font-size: 1.3rem;
-        }
-
-        .recipe-details ul li {
-            font-size: 1rem;
-        }
-}
-
 /* User Profile Page Styling */
 .profile-container {
     display: flex;
@@ -963,7 +765,7 @@ body {
 .username {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 5px;
+/*    margin-bottom: 5px;*/
     display: block;
 }
 
@@ -1029,112 +831,6 @@ body {
     box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.7);
 }
 
-
-
-/* ------------------ Responsive Styles ------------------ */
-
-/* General Styles for All Screens */
-@media (max-width: 1200px) {
-    .content-container {
-        padding: 15px; /* Reduce padding on smaller screens */
-    }
-
-    .navbar {
-        width: calc(100% - 20px); /* Adjust navbar width */
-        margin: 10px; /* Adjust margin */
-    }
-
-    .feature-card {
-        width: 45%; /* Adjust card width for medium screens */
-    }
-
-    .fav-recipe-card {
-        width: 45%; /* Adjust card width for medium screens */
-    }
-
-    .trending-recipe-card {
-        width: 80%; /* Adjust card width for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack navbar items vertically */
-        padding: 10px; /* Adjust padding */
-    }
-
-    .nav-left, .nav-right {
-        position: relative; /* Change position for better stacking */
-        top: auto; /* Reset top position */
-        transform: none; /* Reset transform */
-        justify-content: center; /* Center items */
-        margin: 5px 0; /* Add margin for spacing */
-    }
-
-    .features {
-        flex-direction: column; /* Stack feature cards vertically */
-        align-items: center; /* Center align */
-    }
-
-    .feature-card {
-        width: 80%; /* Full width for feature cards */
-        margin-bottom: 20px; /* Add margin for spacing */
-    }
-
-    .fav-recipe-card {
-        width: 90%; /* Full width for recipe cards */
-    }
-
-    .trending-recipe-card {
-        width: 90%; /* Full width for trending cards */
-    }
-
-    .recipe-details {
-        width: 100%; /* Full width for recipe details */
-    }
-
-    .profile-container {
-        flex-direction: column; /* Stack profile elements */
-        align-items: center; /* Center align */
-    }
-
-    .profile-sidebar {
-        border-right: none; /* Remove border on smaller screens */
-        margin-bottom: 20px; /* Add margin for spacing */
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 5px; /* Reduce padding */
-    }
-
-    .feature-card h2, .fav-recipe-card h2, .trending-recipe-card h3 {
-        font-size: 1.5rem; /* Adjust heading size */
-    }
-
-    .feature-card p, .fav-recipe-card p, .trending-recipe-card p {
-        font-size: 0.9rem; /* Adjust paragraph size */
-    }
-
-    .recipe-details h2 {
-        font-size: 1.5rem; /* Adjust heading size */
-    }
-
-    .recipe-details h3 {
-        font-size: 1.2rem; /* Adjust heading size */
-    }
-
-    .recipe-details p {
-        font-size: 0.9rem; /* Adjust paragraph size */
-    }
-
-    .ingredient {
-        min-width: 70px; /* Adjust ingredient size */
-        max-width: 90px; /* Adjust ingredient size */
-    }
-}
-
-.gridview th, td {
-    padding: 8px;
+.gridview td, .gridview th {
+    padding: 10px;
 }

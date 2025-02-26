@@ -12,14 +12,13 @@ namespace SmartRecipeFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int userId = Convert.ToInt32(Session["userId"]);
             if (Session["userId"] != null)
             {
+                int userId = Convert.ToInt32(Session["userId"]);
                 String email = Session["email"].ToString();
                 String name = getName();
                 String[] usernameArray = Session["email"].ToString().Split('@');
                 String username = usernameArray[0];
-                emailLabel.Text = email;
                 displayEmailLabel.Text = email;
                 displayNameLabel.Text = name;
                 usernameLabel.Text = username;
@@ -41,6 +40,7 @@ namespace SmartRecipeFinder
             String query = "SELECT name FROM users WHERE email = '" + email + "'";
             SqlCommand command = new SqlCommand(query, connection);
             String name = Convert.ToString(command.ExecuteScalar());
+            connection.Close();
             return name;
         }
 

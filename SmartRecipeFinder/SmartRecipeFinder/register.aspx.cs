@@ -14,15 +14,7 @@ namespace SmartRecipeFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            matchLabel.Visible = false;
-            if (!IsPostBack)
-            {
-                if (Session["email"] != null)
-                {
-                    Response.Redirect("profile.aspx");
-                }
-            }
-            Session.Clear();
+            
         }
 
         protected void RegisterButton_Click(object sender, EventArgs e)

@@ -14,7 +14,7 @@
             </div>
 
             <div class="trending-recipe-card">
-                <img src="images/Lentil-Cashew-Pulao.jpeg" alt="Lentil Cashew Pulao">
+                <img src="images/Lentil-Cashew-Pulao.jpg" alt="Lentil Cashew Pulao">
                 <h3>Lentil Cashew Pulao</h3>
                 <p>Duration: 35 min</p>
                 <asp:Button ID="viewRecipe12" runat="server" CssClass="btn-primary" Height="52px" OnClick="viewRecipe12_Click" Text="View Recipe" Width="160px" />

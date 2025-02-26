@@ -21,19 +21,19 @@
       </div>
       <div class="ingredients">
         <label class="ingredient">
-          <asp:CheckBox ID="chkMilk" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=milk onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkMilk" runat="server" CssClass="hidden-checkbox" />
           Milk
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkPaneer" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=paneer onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkPaneer" runat="server" CssClass="hidden-checkbox" />
           Paneer
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkCheese" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=cheese onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkCheese" runat="server" CssClass="hidden-checkbox" />
           Cheese
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkButter" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=butter onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkButter" runat="server" CssClass="hidden-checkbox" />
           Butter
         </label>
      
@@ -48,19 +48,19 @@
       </div>
       <div class="ingredients">
         <label class="ingredient">
-          <asp:CheckBox ID="chkCarrot" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=carrot onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkCarrot" runat="server" CssClass="hidden-checkbox" />
           Carrot
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkPotato" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=potato onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkPotato" runat="server" CssClass="hidden-checkbox" />
           Potato
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkTomato" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=tomato onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkTomato" runat="server" CssClass="hidden-checkbox" />
           Tomato
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkOnion" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=onion onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkOnion" runat="server" CssClass="hidden-checkbox" />
           Onion
         </label>
       
@@ -77,19 +77,19 @@
       </div>
       <div class="ingredients">
         <label class="ingredient">
-          <asp:CheckBox ID="chkApple" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=apple onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkApple" runat="server" CssClass="hidden-checkbox" />
           Apple
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkBanana" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=banana onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkBanana" runat="server" CssClass="hidden-checkbox" />
           Banana
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkGrapes" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=grapes onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkGrapes" runat="server" CssClass="hidden-checkbox"  />
           Grapes
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkMango" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=mango onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkMango" runat="server" CssClass="hidden-checkbox" />
           Mango
         </label>
       </div>
@@ -104,19 +104,19 @@
       </div>
       <div class="ingredients">
         <label class="ingredient">
-          <asp:CheckBox ID="chkAlmond" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=almond onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkAlmond" runat="server" CssClass="hidden-checkbox" />
           Almond
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkCashew" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=cashew onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkCashew" runat="server" CssClass="hidden-checkbox"  />
           Cashew
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkFlaxSeed" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=flax-seed onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkFlaxSeed" runat="server" CssClass="hidden-checkbox" />
           Flax Seeds
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkChiaSeed" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=chia-seed onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkChiaSeed" runat="server" CssClass="hidden-checkbox" />
           Chia Seeds
         </label>
 
@@ -132,20 +132,20 @@
       <div class="ingredients">
      
         <label class="ingredient">
-          <asp:CheckBox ID="chkWheat" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=wheat onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkWheat" runat="server" CssClass="hidden-checkbox" />
           Wheat
         </label>
     
         <label class="ingredient">
-          <asp:CheckBox ID="chkBarley" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=barley onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkBarley" runat="server" CssClass="hidden-checkbox" />
           Barley
         </label>
          <label class="ingredient">
-          <asp:CheckBox ID="chkOats" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=oats onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkOats" runat="server" CssClass="hidden-checkbox" />
           Oats
         </label>
        <label class="ingredient">
-         <asp:CheckBox ID="chkRice" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=rice onclick=toggleSelection(this)" />
+         <asp:CheckBox ID="chkRice" runat="server" CssClass="hidden-checkbox" />
          Rice
        </label>
       </div>
@@ -159,19 +159,19 @@
       </div>
       <div class="ingredients">
         <label class="ingredient">
-          <asp:CheckBox ID="chkLentils" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=lentils onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkLentils" runat="server" CssClass="hidden-checkbox" />
           Lentils
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkChickpeas" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=chickpeas onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkChickpeas" runat="server" CssClass="hidden-checkbox" />
           Chickpeas
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkPeas" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=peas onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkPeas" runat="server" CssClass="hidden-checkbox" />
           Peas
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkBeans" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=beans onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkBeans" runat="server" CssClass="hidden-checkbox" />
           Beans
         </label>
       </div>
@@ -185,23 +185,23 @@
       </div>
       <div class="ingredients">
         <label class="ingredient">
-          <asp:CheckBox ID="chkOliveOil" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=olive-oil onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkOliveOil" runat="server" CssClass="hidden-checkbox" />
           Olive Oil
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkPeanutOil" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=peanut-oil onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkPeanutOil" runat="server" CssClass="hidden-checkbox" />
           Peanut Oil
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkCornOil" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=corn-oil onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkCornOil" runat="server" CssClass="hidden-checkbox" />
           Corn Oil
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkSesameOil" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=sesame-oil onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkSesameOil" runat="server" CssClass="hidden-checkbox" />
           Sesame Oil
         </label>
         <label class="ingredient">
-          <asp:CheckBox ID="chkCanolaOil" runat="server" CssClass="hidden-checkbox" InputAttributes="name=ingredient value=canola-oil onclick=toggleSelection(this)" />
+          <asp:CheckBox ID="chkCanolaOil" runat="server" CssClass="hidden-checkbox" />
           Canola Oil
         </label>
       </div>
@@ -209,12 +209,6 @@
 
 
 </div>
-       
-  <script>
-      function toggleSelection(checkbox) {
-          checkbox.classList.toggle('selected');
-      }
-  </script>
 
 
 

@@ -16,30 +16,24 @@ namespace SmartRecipeFinder
             SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\C#\project\heetsolanki\SmartRecipeFinder\SmartRecipeFinder\SmartRecipeFinder\App_Data\SmartRecipeFinder.mdf;Integrated Security=True");
             connection.Open();
             int recipeId = Convert.ToInt32(Session["recipe"]);
-            String fetchRecipe = "SELECT COUNT(*) FROM [recipe-details] WHERE Id = '" + recipeId + "'";
-            SqlCommand findRecipe = new SqlCommand(fetchRecipe, connection);
-            int recipeCount = (int)findRecipe.ExecuteScalar();
-            if (recipeCount == 1)
-            {
-                recipeNameLabel.Text = getValue(recipeNameLabel, "recipe-name", recipeId);
-                durationLabel.Text = getValue(durationLabel, "duration", recipeId);
-                ingredientLabel1.Text = getValue(ingredientLabel1, "ingredient-1", recipeId);
-                ingredientLabel2.Text = getValue(ingredientLabel2, "ingredient-2", recipeId);
-                ingredientLabel3.Text = getValue(ingredientLabel3, "ingredient-3", recipeId);
-                ingredientLabel4.Text = getValue(ingredientLabel4, "ingredient-4", recipeId);
-                ingredientLabel5.Text = getValue(ingredientLabel5, "ingredient-5", recipeId);
-                cookingStepLabel1.Text = getValue(cookingStepLabel1, "step-1", recipeId);
-                cookingStepLabel2.Text = getValue(cookingStepLabel2, "step-2", recipeId);
-                cookingStepLabel3.Text = getValue(cookingStepLabel3, "step-3", recipeId);
-                cookingStepLabel4.Text = getValue(cookingStepLabel4, "step-4", recipeId);
-                cookingStepLabel5.Text = getValue(cookingStepLabel5, "step-5", recipeId);
-                cookingStepLabel6.Text = getValue(cookingStepLabel6, "step-6", recipeId);
-                caloriesLabel.Text = getValue(caloriesLabel, "calories", recipeId);
-                proteinLabel.Text = getValue(proteinLabel, "protein", recipeId);
-                fatLabel.Text = getValue(fatLabel, "fat", recipeId);
-                recipeImage.ImageUrl = getImage("image", recipeId);
-                recipeImage.AlternateText = getImage("alt-text", recipeId);
-            }
+            recipeNameLabel.Text = getValue(recipeNameLabel, "recipe-name", recipeId);
+            durationLabel.Text = getValue(durationLabel, "duration", recipeId);
+            ingredientLabel1.Text = getValue(ingredientLabel1, "ingredient-1", recipeId);
+            ingredientLabel2.Text = getValue(ingredientLabel2, "ingredient-2", recipeId);
+            ingredientLabel3.Text = getValue(ingredientLabel3, "ingredient-3", recipeId);
+            ingredientLabel4.Text = getValue(ingredientLabel4, "ingredient-4", recipeId);
+            ingredientLabel5.Text = getValue(ingredientLabel5, "ingredient-5", recipeId);
+            cookingStepLabel1.Text = getValue(cookingStepLabel1, "step-1", recipeId);
+            cookingStepLabel2.Text = getValue(cookingStepLabel2, "step-2", recipeId);
+            cookingStepLabel3.Text = getValue(cookingStepLabel3, "step-3", recipeId);
+            cookingStepLabel4.Text = getValue(cookingStepLabel4, "step-4", recipeId);
+            cookingStepLabel5.Text = getValue(cookingStepLabel5, "step-5", recipeId);
+            cookingStepLabel6.Text = getValue(cookingStepLabel6, "step-6", recipeId);
+            caloriesLabel.Text = getValue(caloriesLabel, "calories", recipeId);
+            proteinLabel.Text = getValue(proteinLabel, "protein", recipeId);
+            fatLabel.Text = getValue(fatLabel, "fat", recipeId);
+            recipeImage.ImageUrl = getImage("image", recipeId);
+            recipeImage.AlternateText = getImage("alt-text", recipeId);
         }
         private String getValue(Label label, String recipe, int recipeId)
         {
